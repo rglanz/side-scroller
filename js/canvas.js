@@ -92,14 +92,15 @@ class Scenery {
 // Handle images
 function createImage(url) {
   const image = new Image()
+  image.onload = function () {}
   image.src = url
   return image
 }
-const platformImage = createImage("../assets/platform.png")
+const platformImage = createImage("assets/platform.png")
 
 // Initialize objects
 let player = new Player({
-  image: createImage("../assets/sprite_stand_right.png"),
+  image: createImage("assets/sprite_stand_right.png"),
 })
 let platforms = []
 let scenery = []
@@ -116,7 +117,7 @@ const keys = {
 // (Re)start game
 function init() {
   player = new Player({
-    image: createImage("../assets/sprite_stand_right.png"),
+    image: createImage("assets/sprite_stand_right.png"),
   })
 
   platforms = [
@@ -128,7 +129,7 @@ function init() {
     new Platform({
       x: 900,
       y: 576 - 150,
-      image: createImage("../assets/platform_narrow.png"),
+      image: createImage("assets/platform_narrow.png"),
     }),
     new Platform({
       x: platformImage.width,
@@ -148,12 +149,12 @@ function init() {
     new Platform({
       x: 4 * platformImage.width + 400,
       y: 576 - platformImage.height - 100,
-      image: createImage("../assets/platform_narrow.png"),
+      image: createImage("assets/platform_narrow.png"),
     }),
     new Platform({
       x: 4 * platformImage.width + 550,
       y: 576 - platformImage.height - 200,
-      image: createImage("../assets/platform_narrow.png"),
+      image: createImage("assets/platform_narrow.png"),
     }),
     new Platform({
       x: 5 * platformImage.width + 500,
@@ -163,7 +164,7 @@ function init() {
     new Platform({
       x: 5 * platformImage.width + 700,
       y: 576 - platformImage.height - 200,
-      image: createImage("../assets/win_text.png"),
+      image: createImage("assets/win_text.png"),
     }),
   ]
 
@@ -171,7 +172,7 @@ function init() {
     new Scenery({
       x: 0,
       y: 0,
-      image: createImage("../assets/background.png"),
+      image: createImage("assets/background.png"),
     }),
   ]
 
