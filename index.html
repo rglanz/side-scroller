@@ -9,13 +9,44 @@
         margin: 0;
         background-color: rgb(80, 80, 80);
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+      }
+      div {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      /* .btn {
+        width: 1rem;
+        height: 1rem;
+      } */
+      #w-btn {
+        height: 3rem;
+        width: 5rem;
+        margin: 5px;
+        grid-column-start: 2;
+        grid-row-start: 1;
+      }
+      #a-btn,
+      #s-btn,
+      #d-btn {
+        height: 3rem;
+        width: 5rem;
+        margin: 5px;
+        grid-row-start: 2;
       }
     </style>
   </head>
   <body>
     <canvas></canvas>
     <script src="./js/canvas.js" type="module"></script>
+    <div class="btn-container">
+      <button id="a-btn">A</button>
+      <button id="w-btn">W</button>
+      <button id="s-btn">S</button>
+      <button id="d-btn">D</button>
+    </div>
   </body>
 </html>

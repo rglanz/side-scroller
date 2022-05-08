@@ -284,3 +284,27 @@ window.addEventListener("keyup", ({ keyCode }) => {
       break
   }
 })
+
+// WASD pad
+const aBtn = document.getElementById("a-btn")
+aBtn.addEventListener("mousedown", () => {
+  keys.left.pressed = true
+})
+
+aBtn.addEventListener("mouseup", () => {
+  keys.left.pressed = false
+})
+
+const dBtn = document.getElementById("d-btn")
+dBtn.addEventListener("mousedown", () => {
+  keys.right.pressed = true
+})
+
+dBtn.addEventListener("mouseup", () => {
+  keys.right.pressed = false
+})
+
+const wBtn = document.getElementById("w-btn")
+wBtn.addEventListener("mousedown", () => {
+  player.velocity.y = -20
+})
