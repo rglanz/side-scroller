@@ -300,6 +300,15 @@ dBtn.addEventListener("touchstart", () => {
   keys.right.pressed = true
 })
 
+aBtn.addEventListener("mousedown", () => {
+  keys.left.pressed = false
+})
+
+const dBtn = document.getElementById("d-btn")
+dBtn.addEventListener("mouseup", () => {
+  keys.right.pressed = true
+})
+
 dBtn.addEventListener("touchend", () => {
   keys.right.pressed = false
 })
