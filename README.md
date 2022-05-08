@@ -1,7 +1,7 @@
 # side-scroller
 Play as Tonka the donkey-brained dog in this short side scroller demo, written in pure Javascript.
 
-Use WASD to move.
+Use WASD to move. (Currently only supported on desktop.)
 
 <img src="assets/thumbnail.png" width="600px" />
 
