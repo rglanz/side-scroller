@@ -2,7 +2,7 @@ const canvas = document.querySelector("canvas")
 
 const c = canvas.getContext("2d")
 canvas.width = 1024
-canvas.height = 576
+canvas.height = 768
 const gravity = 1.5
 
 // Classes
@@ -123,47 +123,47 @@ function init() {
   platforms = [
     new Platform({
       x: 0,
-      y: 576 - platformImage.height,
+      y: 768 - platformImage.height,
       image: platformImage,
     }),
     new Platform({
       x: 900,
-      y: 576 - 150,
+      y: 768 - 150,
       image: createImage("assets/platform_narrow.png"),
     }),
     new Platform({
       x: platformImage.width,
-      y: 576 - platformImage.height,
+      y: 768 - platformImage.height,
       image: platformImage,
     }),
     new Platform({
       x: 2 * platformImage.width + 300,
-      y: 576 - platformImage.height,
+      y: 768 - platformImage.height,
       image: platformImage,
     }),
     new Platform({
       x: 3 * platformImage.width + 400,
-      y: 576 - platformImage.height,
+      y: 768 - platformImage.height,
       image: platformImage,
     }),
     new Platform({
       x: 4 * platformImage.width + 400,
-      y: 576 - platformImage.height - 100,
+      y: 768 - platformImage.height - 100,
       image: createImage("assets/platform_narrow.png"),
     }),
     new Platform({
       x: 4 * platformImage.width + 550,
-      y: 576 - platformImage.height - 200,
+      y: 768 - platformImage.height - 200,
       image: createImage("assets/platform_narrow.png"),
     }),
     new Platform({
       x: 5 * platformImage.width + 500,
-      y: 576 - platformImage.height,
+      y: 768 - platformImage.height,
       image: platformImage,
     }),
     new Platform({
       x: 5 * platformImage.width + 700,
-      y: 576 - platformImage.height - 200,
+      y: 768 - platformImage.height - 200,
       image: createImage("assets/win_text.png"),
     }),
   ]
@@ -285,22 +285,22 @@ window.addEventListener("keyup", ({ keyCode }) => {
   }
 })
 
-// WASD pad
+// WASD pad (for mobile)
 const aBtn = document.getElementById("a-btn")
-aBtn.addEventListener("mousedown", () => {
+aBtn.addEventListener("touchstart", () => {
   keys.left.pressed = true
 })
 
-aBtn.addEventListener("mouseup", () => {
+aBtn.addEventListener("touchend", () => {
   keys.left.pressed = false
 })
 
 const dBtn = document.getElementById("d-btn")
-dBtn.addEventListener("mousedown", () => {
+dBtn.addEventListener("touchstart", () => {
   keys.right.pressed = true
 })
 
-dBtn.addEventListener("mouseup", () => {
+dBtn.addEventListener("touchend", () => {
   keys.right.pressed = false
 })
 
