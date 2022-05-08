@@ -308,3 +308,9 @@ const wBtn = document.getElementById("w-btn")
 wBtn.addEventListener("mousedown", () => {
   player.velocity.y = -20
 })
+
+window.oncontextmenu = function (event) {
+  event.preventDefault()
+  event.stopPropagation()
+  return false
+}
