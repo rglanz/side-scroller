@@ -14,14 +14,23 @@
         align-items: center;
         justify-content: center;
 
-        touch-action: manipulation;
+        -webkit-touch-callout: none; /* Safari */
+        -webkit-user-select: none; /* Chrome */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+      }
+      div {
+        height: 60px;
+        width: 60px;
+        background-color: red;
       }
     </style>
   </head>
   <body>
     <canvas></canvas>
     <script src="./js/canvas.js" type="module"></script>
-    <p>5</p>
-    <button id="d-btn">D</button>
+    <p>6</p>
+    <div id="d-btn"></div>
   </body>
 </html>
