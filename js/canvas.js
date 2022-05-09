@@ -353,12 +353,18 @@ aBtn.addEventListener("pointerdown", () => {
 aBtn.addEventListener("pointerup", () => {
   keys.left.pressed = false
 })
+aBtn.addEventListener("pointerout", () => {
+  keys.left.pressed = false
+})
 
 const dBtn = document.getElementById("d-btn")
 dBtn.addEventListener("pointerdown", () => {
   keys.right.pressed = true
 })
 dBtn.addEventListener("pointerup", () => {
+  keys.right.pressed = false
+})
+dBtn.addEventListener("pointerout", () => {
   keys.right.pressed = false
 })
 
