@@ -346,20 +346,20 @@ wBtn.addEventListener("pointerdown", (event) => {
   }
 })
 
-const aBtn = document.getElementById("a-btn")
-aBtn.addEventListener("pointerdown", (event) => {
-  keys.left.pressed = true
-})
-aBtn.addEventListener("pointerup", () => {
-  keys.left.pressed = false
-})
-
 const dBtn = document.getElementById("d-btn")
 dBtn.addEventListener("pointerdown", (event) => {
   keys.right.pressed = true
 })
 dBtn.addEventListener("pointerup", () => {
   keys.right.pressed = false
+})
+
+const aBtn = document.getElementById("a-btn")
+aBtn.addEventListener("pointerdown", (event) => {
+  keys.left.pressed = true
+})
+aBtn.addEventListener("pointerup", () => {
+  keys.left.pressed = false
 })
 
 window.oncontextmenu = function (event) {

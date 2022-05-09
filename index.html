@@ -33,8 +33,11 @@
       #d-btn {
         grid-row-start: 2;
       }
-      #s-btn {
+      #s-btn,
+      #s-btn:active,
+      #s-btn:focus {
         background: lightgray;
+        outline: none !important;
       }
       button {
         height: 8rem;
@@ -59,7 +62,6 @@
   <body>
     <canvas></canvas>
     <script src="./js/canvas.js" type="module"></script>
-    <p>7</p>
     <div class="btn-container">
       <button id="w-btn">W</button>
       <button id="a-btn">A</button>
