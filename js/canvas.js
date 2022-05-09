@@ -350,3 +350,9 @@ dBtn.addEventListener("pointerdown", (event) => {
 dBtn.addEventListener("pointerup", () => {
   keys.right.pressed = false
 })
+
+window.oncontextmenu = function (event) {
+  event.preventDefault()
+  event.stopPropagation()
+  return false
+}
