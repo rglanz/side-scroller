@@ -142,27 +142,79 @@ function init() {
       image: platformImage,
     }),
     new Platform({
-      x: 3 * platformImage.width + 400,
+      x: 3 * platformImage.width + 450,
       y: 768 - platformImage.height,
       image: platformImage,
     }),
+
     new Platform({
-      x: 4 * platformImage.width + 400,
+      x: 4 * platformImage.width + 500,
       y: 768 - platformImage.height - 100,
       image: createImage("assets/platform_narrow.png"),
     }),
     new Platform({
-      x: 4 * platformImage.width + 550,
+      x: 4 * platformImage.width + 650,
       y: 768 - platformImage.height - 200,
       image: createImage("assets/platform_narrow.png"),
     }),
+
     new Platform({
       x: 5 * platformImage.width + 500,
       y: 768 - platformImage.height,
       image: platformImage,
     }),
     new Platform({
-      x: 5 * platformImage.width + 700,
+      x: 6 * platformImage.width + 500,
+      y: 768 - platformImage.height,
+      image: platformImage,
+    }),
+
+    new Platform({
+      x: 7 * platformImage.width + 550,
+      y: 768 - platformImage.height - 100,
+      image: createImage("assets/platform_narrow.png"),
+    }),
+    new Platform({
+      x: 7 * platformImage.width + 700,
+      y: 768 - platformImage.height - 200,
+      image: createImage("assets/platform_narrow.png"),
+    }),
+    new Platform({
+      x: 7 * platformImage.width + 850,
+      y: 768 - platformImage.height - 300,
+      image: createImage("assets/platform_narrow.png"),
+    }),
+    new Platform({
+      x: 7 * platformImage.width + 1050,
+      y: 768 - platformImage.height - 150,
+      image: createImage("assets/platform_narrow.png"),
+    }),
+
+    new Platform({
+      x: 9 * platformImage.width + 500,
+      y: 768 - platformImage.height,
+      image: platformImage,
+    }),
+
+    new Platform({
+      x: 10 * platformImage.width + 700,
+      y: 768 - platformImage.height,
+      image: createImage("assets/platform_narrow.png"),
+    }),
+
+    new Platform({
+      x: 11 * platformImage.width + 600,
+      y: 768 - platformImage.height,
+      image: platformImage,
+    }),
+    new Platform({
+      x: 12 * platformImage.width + 600,
+      y: 768 - platformImage.height,
+      image: platformImage,
+    }),
+
+    new Platform({
+      x: 11 * platformImage.width + 800,
       y: 768 - platformImage.height - 200,
       image: createImage("assets/win_text.png"),
     }),
@@ -238,7 +290,7 @@ function animate() {
   })
 
   // Win condition
-  if (scrollOffset > 5 * platformImage.width + 300) {
+  if (scrollOffset > 10 * platformImage.width + 800) {
     init()
   }
 
