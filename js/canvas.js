@@ -338,3 +338,12 @@ window.addEventListener("keyup", ({ keyCode }) => {
       break
   }
 })
+
+const dBtn = document.getElementById("d-btn")
+dBtn.addEventListener("mousedown", () => {
+  keys.right.pressed = true
+})
+
+dBtn.addEventListener("mouseup", () => {
+  keys.right.pressed = false
+})
