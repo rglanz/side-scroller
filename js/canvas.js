@@ -318,7 +318,7 @@ window.addEventListener("keydown", ({ keyCode, repeat }) => {
         return
       }
       if (player.velocity.y === 0) {
-        player.velocity.y = -20
+        player.velocity.y = -25
       }
       break
   }
@@ -339,14 +339,25 @@ window.addEventListener("keyup", ({ keyCode }) => {
   }
 })
 
-const dBtn = document.getElementById("d-btn")
-const output = document.querySelector("p")
-dBtn.addEventListener("pointerdown", (event) => {
-  keys.right.pressed = true
-  output.innerHTML(event.pointerType)
-  console.log("d pressed")
+const wBtn = document.getElementById("w-btn")
+wBtn.addEventListener("pointerdown", (event) => {
+  if (player.velocity.y === 0) {
+    player.velocity.y = -25
+  }
 })
 
+const aBtn = document.getElementById("a-btn")
+aBtn.addEventListener("pointerdown", (event) => {
+  keys.left.pressed = true
+})
+aBtn.addEventListener("pointerup", () => {
+  keys.left.pressed = false
+})
+
+const dBtn = document.getElementById("d-btn")
+dBtn.addEventListener("pointerdown", (event) => {
+  keys.right.pressed = true
+})
 dBtn.addEventListener("pointerup", () => {
   keys.right.pressed = false
 })

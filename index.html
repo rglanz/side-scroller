@@ -20,10 +20,39 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
         user-select: none;
       }
-      div {
-        height: 60px;
-        width: 60px;
-        background-color: red;
+      .btn-container {
+        display: grid;
+        gap: 20px;
+      }
+      #w-btn {
+        grid-row-start: 1;
+        grid-column-start: 2;
+      }
+      #a-btn,
+      #s-btn,
+      #d-btn {
+        grid-row-start: 2;
+      }
+      #s-btn {
+        background: lightgray;
+      }
+      button {
+        height: 8rem;
+        width: 8rem;
+
+        background: white;
+        border: none;
+        border-radius: 50px;
+
+        font-family: sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+      }
+      @media display {
+        .btn-container {
+          height: 0;
+          width: 0;
+        }
       }
     </style>
   </head>
@@ -31,6 +60,11 @@
     <canvas></canvas>
     <script src="./js/canvas.js" type="module"></script>
     <p>7</p>
-    <button id="d-btn">D</button>
+    <div class="btn-container">
+      <button id="w-btn">W</button>
+      <button id="a-btn">A</button>
+      <button id="s-btn">S</button>
+      <button id="d-btn">D</button>
+    </div>
   </body>
 </html>
