@@ -3,70 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" user-scalable="no" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Side Scroller Game</title>
-    <style>
-      body {
-        height: 100vh;
-        margin: 0;
-        background-color: rgb(174, 194, 192);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        -webkit-touch-callout: none; /* Safari */
-        -webkit-user-select: none; /* Chrome */
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none;
-      }
-      .btn-container {
-        display: grid;
-        gap: 20px;
-      }
-      #w-btn {
-        grid-row-start: 1;
-        grid-column-start: 2;
-      }
-      #a-btn,
-      #s-btn,
-      #d-btn {
-        grid-row-start: 2;
-      }
-      #s-btn,
-      #s-btn:active,
-      #s-btn:focus {
-        background: lightgray;
-        outline: none !important;
-      }
-      button {
-        height: 8rem;
-        width: 8rem;
-
-        background: white;
-        border: none;
-        border-radius: 50px;
-
-        font-family: sans-serif;
-        font-size: 3rem;
-        font-weight: 700;
-      }
-      @media display {
-        .btn-container {
-          height: 0;
-          width: 0;
-        }
-      }
-    </style>
   </head>
   <body>
-    <canvas></canvas>
-    <script src="./js/canvas.js" type="module"></script>
-    <div class="btn-container">
-      <button id="w-btn">W</button>
-      <button id="a-btn">A</button>
-      <button id="s-btn">S</button>
-      <button id="d-btn">D</button>
+    <div class="main-container">
+      <canvas></canvas>
+      <script src="./js/canvas.js" type="module"></script>
+      <div class="btn-container">
+        <button id="w-btn">W</button>
+        <button id="a-btn">A</button>
+        <button id="s-btn">S</button>
+        <button id="d-btn">D</button>
+      </div>
     </div>
   </body>
 </html>
