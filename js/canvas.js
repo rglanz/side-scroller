@@ -340,26 +340,26 @@ window.addEventListener("keyup", ({ keyCode }) => {
 })
 
 const wBtn = document.getElementById("w-btn")
-wBtn.addEventListener("pointerdown", (event) => {
+wBtn.addEventListener("pointerdown", () => {
   if (player.velocity.y === 0) {
     player.velocity.y = -25
   }
 })
 
-const dBtn = document.getElementById("d-btn")
-dBtn.addEventListener("pointerdown", (event) => {
-  keys.right.pressed = true
-})
-dBtn.addEventListener("pointerup", () => {
-  keys.right.pressed = false
-})
-
 const aBtn = document.getElementById("a-btn")
-aBtn.addEventListener("pointerdown", (event) => {
+aBtn.addEventListener("pointerdown", () => {
   keys.left.pressed = true
 })
 aBtn.addEventListener("pointerup", () => {
   keys.left.pressed = false
+})
+
+const dBtn = document.getElementById("d-btn")
+dBtn.addEventListener("pointerdown", () => {
+  keys.right.pressed = true
+})
+dBtn.addEventListener("pointerup", () => {
+  keys.right.pressed = false
 })
 
 window.oncontextmenu = function (event) {
