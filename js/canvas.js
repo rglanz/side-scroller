@@ -340,11 +340,13 @@ window.addEventListener("keyup", ({ keyCode }) => {
 })
 
 const dBtn = document.getElementById("d-btn")
-dBtn.addEventListener("touchstart", (event) => {
+const output = document.querySelector("p")
+dBtn.addEventListener("pointerdown", (event) => {
   keys.right.pressed = true
+  output.innerHTML(event.pointerType)
   console.log("d pressed")
 })
 
-dBtn.addEventListener("touchend", () => {
+dBtn.addEventListener("pointerup", () => {
   keys.right.pressed = false
 })
