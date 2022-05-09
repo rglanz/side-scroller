@@ -317,7 +317,9 @@ window.addEventListener("keydown", ({ keyCode, repeat }) => {
       if (repeat) {
         return
       }
-      player.velocity.y = -20
+      if (player.velocity.y === 0) {
+        player.velocity.y = -20
+      }
       break
   }
 })
