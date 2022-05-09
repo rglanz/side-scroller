@@ -340,10 +340,10 @@ window.addEventListener("keyup", ({ keyCode }) => {
 })
 
 const dBtn = document.getElementById("d-btn")
-dBtn.addEventListener("mousedown", () => {
+dBtn.addEventListener("pointerdown", () => {
   keys.right.pressed = true
 })
 
-dBtn.addEventListener("mouseup", () => {
+dBtn.addEventListener("pointerup", () => {
   keys.right.pressed = false
 })
