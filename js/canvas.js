@@ -42,7 +42,7 @@ class Player {
 
   update() {
     this.frames++
-    if (this.frames > 8) {
+    if (this.frames > 12) {
       this.frames = 0
     }
     this.draw()
